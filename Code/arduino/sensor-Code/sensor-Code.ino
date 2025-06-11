@@ -1,14 +1,12 @@
-#include <DHT.h>
-#include <MQ135.h>
+#include <DHT.h> // Libs used
 #include "thingProperties.h"
-
-#define DHTPIN D3 // Define the pins
+// Pins defenition
+#define DHTPIN D3 
 #define DHTTYPE DHT11 
 float sensor = A0;
 
 float gas_value; 
 
-MQ135 mq135_sensor(PIN_MQ135);
 DHT dht(DHTPIN, DHTTYPE);
 
 void setup() {
@@ -53,15 +51,14 @@ void loop() {
   // Read air quality data
 gas_value=analogRead(sensor); 
 
+// Print data
+  
+Serial.println(String(F("CO2 Value: ")) + gas_value);
+  
+Serial.println(String(F("Humidity Value: ")) + feuchtigkeit); 
 
-Serial.println(gas_value);
+Serial.println(String(F("Temperatur Value: ")) + temperatur); 
 
-Serial.println(feuchtigkeit); 
-
-Serial.println(temperatur); 
-
-
-  // Print sensor data
 
 
   delay(3000); // Wait 3 seconds between measurements
