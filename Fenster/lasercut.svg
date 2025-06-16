@@ -23,15 +23,15 @@
      inkscape:pagecheckerboard="false"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="0.48763521"
-     inkscape:cx="650.07611"
-     inkscape:cy="580.35186"
+     inkscape:zoom="0.56650991"
+     inkscape:cx="751.09012"
+     inkscape:cy="518.08449"
      inkscape:window-width="1512"
-     inkscape:window-height="945"
+     inkscape:window-height="864"
      inkscape:window-x="0"
-     inkscape:window-y="37"
+     inkscape:window-y="38"
      inkscape:window-maximized="0"
-     inkscape:current-layer="layer3"
+     inkscape:current-layer="layer4"
      showgrid="true">
     <inkscape:grid
        id="grid9"
@@ -62,7 +62,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer1"
-     inkscape:label="Front">
+     inkscape:label="Front"
+     style="display:none">
     <path
        id="rect7"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
@@ -72,7 +73,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer2"
-     inkscape:label="Back">
+     inkscape:label="Back"
+     style="display:none">
     <path
        id="path257"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
@@ -82,7 +84,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer3"
-     inkscape:label="Sides">
+     inkscape:label="Sides"
+     style="display:none">
     <path
        id="rect257"
        style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.1;stroke-dasharray:none;stroke-opacity:1"
@@ -102,5 +105,28 @@
        style="fill:none;stroke:#000000;stroke-width:0.1"
        d="m 404.04976,33.050245 v -9.999911 h -7.0497 V 20.05 h -9.99991 v 3.000334 h -9.99991 V 20.05 h -10.00042 v 3.000334 h -9.99991 V 20.05 h -9.9999 v 3.000334 H 337.0001 V 20.05 h -9.9999 v 3.000334 H 316.99977 V 20.05 h -9.9999 v 3.000334 h -9.99991 V 20.05 h -9.99991 v 3.000334 h -9.9999 V 20.05 h -9.99991 v 3.000334 H 256.99982 V 20.05 h -9.99991 v 3.000334 H 237 V 20.05 h -9.94978 v 16.000063"
        sodipodi:nodetypes="cccccccccccccccccccccccccccccccccccccc" />
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="Rahmen"
+     style="display:inline">
+    <path
+       id="rect1"
+       style="fill:none;stroke:#000000;stroke-width:0.101607;stroke-opacity:1"
+       d="m 134.50093,95.001498 v 9.949262 h 2.94918 v 9.99991 h -2.94918 v 9.9999 h 2.94918 v 9.99991 h -2.94918 V 145 h 190.99816 v -10.04952 h -3.04891 v -9.99991 h 3.04891 v -9.9999 h -3.04891 v -9.99991 h 3.04891 v -9.949262 z"
+       inkscape:label="rect1" />
+    <path
+       id="rect3"
+       style="fill:none;stroke:#000000;stroke-width:0.101216;stroke-opacity:1"
+       d="M 25.000024 30.000753 L 25.000024 33.000053 L 15.000635 33.000053 L 15.000635 278.00009 L 25.000024 278.00009 L 25.000024 280.99939 L 34.999931 280.99939 L 34.999931 278.00009 L 44.999837 278.00009 L 44.999837 280.99939 L 54.999744 280.99939 L 54.999744 278.00009 L 64.999133 278.00009 L 64.999133 33.000053 L 54.999744 33.000053 L 54.999744 30.000753 L 44.999837 30.000753 L 44.999837 33.000053 L 34.999931 33.000053 L 34.999931 30.000753 L 25.000024 30.000753 z " />
+    <path
+       id="rect9"
+       style="fill:none;stroke:#000000;stroke-width:0.118626;stroke-opacity:1"
+       d="M 134.78444,35.019069 V 84.999998 H 395.21557 V 35.019069 Z m 35.43143,9.999906 h 2.99982 v 9.999907 h -2.99982 z m 187.99989,0 h 2.99982 v 9.999907 h -2.99982 z M 170.21587,65.018788 h 2.99982 v 9.999907 h -2.99982 z m 187.99989,0 h 2.99982 v 9.999907 h -2.99982 z" />
+    <path
+       id="path15"
+       style="fill:none;stroke:#000000;stroke-width:0.101216;stroke-opacity:1"
+       d="m 85.000894,32.000699 v 2.9993 H 75.001505 V 280.00004 h 9.999389 v 2.9993 h 9.999907 v -2.9993 h 9.999909 v 2.9993 h 9.9999 v -2.9993 H 125 V 34.999999 h -9.99939 v -2.9993 h -9.9999 v 2.9993 h -9.999909 v -2.9993 z" />
   </g>
 </svg>
