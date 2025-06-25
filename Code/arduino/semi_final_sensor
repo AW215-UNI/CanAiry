@@ -3,11 +3,16 @@
 #include "thingProperties.h"
 
 // Pins defenition
-#define DHTPIN D3 
+#define DHTPIN D4
 #define DHTTYPE DHT11 
 
 #define LED_PIN D2
 #define STRIPSIZE 24
+
+#define BUTTON_ONE D1
+boolean isLedOn = false;
+boolean buttonUp = false;
+
 float sensor = A0;
 
 Adafruit_NeoPixel strip = Adafruit_NeoPixel(STRIPSIZE, LED_PIN, NEO_GRB + NEO_KHZ800);
@@ -19,6 +24,7 @@ DHT dht(DHTPIN, DHTTYPE);
 void setup() {
   // Initialize serial and wait for port to open:
   pinMode(sensor,INPUT); 
+  pinMode(BUTTON_ONE, INPUT_PULLUP);
   Serial.begin(9600);
   // init dht sensor
   dht.begin();
@@ -49,7 +55,6 @@ void loop() {
   // Read humidity and temperature from DHT sensor
   feuchtigkeit = dht.readHumidity(); // reads humidity, temp, co2
   temperatur = dht.readTemperature();
-  cO2 = gas_value;
   
 
   // Check if any reads failed and exit early (to try again).
@@ -60,7 +65,8 @@ void loop() {
   }
 
   // Read air quality data
-gas_value=analogRead(sensor); 
+gas_value=analogRead(sensor);
+kohli = gas_value;
 
 // Print data
   
@@ -68,7 +74,19 @@ Serial.println(String(F("CO2 Value: ")) + gas_value);
   
 Serial.println(String(F("Humidity Value: ")) + feuchtigkeit); 
 
-Serial.println(String(F("Temperatur Value: ")) + temperatur); 
+Serial.println(String(F("Temperatur Value: ")) + temperatur);
+
+  if(wasButtonPressed()) {
+    isLedOn = !isLedOn;
+  }
+    
+  if (isLedOn) {
+          for (int i = 0; i <= STRIPSIZE; i++) {  // Turn Loop LED off
+      strip.setPixelColor(i, strip.Color(0, 0, 0));
+      strip.show();
+    }
+    return;
+  }
 
 
   if (gas_value < 600) { // good CO2 value
@@ -102,6 +120,31 @@ Serial.println(String(F("Temperatur Value: ")) + temperatur);
       strip.show(); 
   }
       }
+}
+/*
+  Since CO2 is READ_WRITE variable, onCO2Change() is
+  executed every time a new value is received from IoT Cloud.
+*/
+void onCO2Change()  {
+  // Add your code here to act upon CO2 change
+}
 
-  delay(1000); // Wait 1 seconds between measurements
+bool wasButtonPressed() {
+  bool buttonDown = !digitalRead(BUTTON_ONE);
+
+  // button up currently
+  if (!buttonDown) {
+    buttonUp = true;
+    return false;
+  }
+
+  // button is down currently
+  if (buttonUp) {
+    // button wasn't pressed last tick
+    buttonUp = false;
+    return true;
+  }
+
+  // but wasn't released yet
+  return false;
 }
