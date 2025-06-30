@@ -68,7 +68,7 @@ Serial.print("  ");
   delay(1000);
     
     if (kohli > 700) { // acceptable CO2 value but it should open
-  stepper.moveTo(1024);
+  stepper.moveTo(-1024);
       isOpen = true;
   while (stepper.run()) {
     yield(); // hinders Watchdog-Reset
